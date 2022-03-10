@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <th>绿色</th>
-                <th>优，绿色约深越好</th>
+                <th>优，绿色越深越好</th>
             </tr>
             <tr>
                 <th>蓝色</th>
@@ -62,12 +62,13 @@
         <table border="1">
             % for house_map in building:
             <tr>
+                % if house_map.get('北') is not None:
                 <th>${house_map['北'].level}</th>
                 % for house in [house_map.get('北'), house_map.get('西'), house_map.get('南'), house_map.get('东')]:
                 % if house is not None:
-                <td width="${house.area}" height="60"
+                <td width="${house.area + 10}" height="60"
                     style="background-color: rgba(${house.red}, ${house.green}, ${house.blue}, ${house.alpha})">
-                    <div style="float:right;font-size: xx-large">${house.sort}</div>
+                    <div style="float:right;font-size: xxx-large">${house.sort}</div>
                     <div>
                         % if house.direction == '东':
                         →
@@ -99,7 +100,8 @@
 
                 </td>
                 %endif
-                % endfor
+                %endfor
+                %endif
             </tr>
             % endfor
         </table>
