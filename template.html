@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>hello world</title>
+</head>
+<body>
+
+<div style="display: inline-block; margin-right: 40px;">
+    <img src="https://lighk.oss-cn-beijing.aliyuncs.com/wyny/pic.jpg"/>
+    <img src="https://lighk.oss-cn-beijing.aliyuncs.com/wyny/pic.PNG"/>
+    <div>
+        <table border="1">
+            <tr>
+                <th>→</th>
+                <th>东</th>
+            </tr>
+            <tr>
+                <th>↓</th>
+                <th>南</th>
+            </tr>
+            <tr>
+                <th>←</th>
+                <th>西</th>
+            </tr>
+            <tr>
+                <th>↑</th>
+                <th>北</th>
+            </tr>
+            <tr>
+                <th>✘</th>
+                <th>公寓</th>
+            </tr>
+            <tr>
+                <th>✔</th>
+                <th>中庭</th>
+            </tr>
+            <tr>
+                <th>-</th>
+                <th>非公寓，非中庭</th>
+            </tr>
+            <tr>
+                <th>绿色</th>
+                <th>优，绿色约深越好</th>
+            </tr>
+            <tr>
+                <th>蓝色</th>
+                <th>良，蓝色越深越好</th>
+            </tr>
+            <tr>
+                <th>红色</th>
+                <th>差，红色越深越差</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div style="overflow-x: scroll">
+    %for key, building in data.items():
+    <div style="display: inline-block; margin-right: 20px;">
+        <dev style="font-size: xxx-large">${key}栋</dev>
+        <table border="1">
+            % for house_map in building:
+            <tr>
+                <th>${house_map['北'].level}</th>
+                % for house in [house_map.get('北'), house_map.get('西'), house_map.get('南'), house_map.get('东')]:
+                % if house is not None:
+                <td width="${house.area}" height="60"
+                    style="background-color: rgba(${house.red}, ${house.green}, ${house.blue}, ${house.alpha})">
+                    <div style="float:right;font-size: xx-large">${house.sort}</div>
+                    <div>
+                        % if house.direction == '东':
+                        →
+                        %endif
+                        % if house.direction == '南':
+                        ↓
+                        %endif
+                        % if house.direction == '西':
+                        ←
+                        %endif
+                        % if house.direction == '北':
+                        ↑
+                        %endif
+                        % if house.apartment:
+                        ✘
+                        % else:
+                        -
+                        % endif
+                        % if house.courtyard:
+                        ✔
+                        % else:
+                        -
+                        % endif
+                    </div>
+
+                    <strong>${house.total}万</strong>
+                    <div>${house.area}平</div>
+                    <!--            ${house.red}, ${house.green}, ${house.blue}, ${house.alpha}-->
+
+                </td>
+                %endif
+                % endfor
+            </tr>
+            % endfor
+        </table>
+    </div>
+    %endfor
+</div>
+</body>
+</html>
