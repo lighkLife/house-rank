@@ -36,61 +36,70 @@ class House:
 
     def score_of_level(self):
         level = int(self.level)
-        score = 0
-        if level >= 32:
-            score = 0
-        elif level >= 31:
-            score = 0
-        elif level >= 30:
-            score = 70
-        elif level >= 25:
-            score = 80
-        elif level >= 20:
-            score = 90
-        elif level >= 16:
-            score = 100
-        elif level >= 10:
-            score = 90
-        elif level >= 6:
-            score = 80
-        elif level >= 4:
-            score = 70
-        else:
-            score = 0
-        return score
+        score_map = {
+            33: 0,
+            32: 0,
+            31: 20,
+            30: 30,
+            29: 40,
+            28: 50,
+            27: 70,
+            26: 70,
+            25: 80,
+            24: 80,
+            23: 80,
+            22: 90,
+            21: 90,
+            20: 90,
+            19: 100,
+            18: 100,
+            17: 100,
+            16: 100,
+            15: 100,
+            14: 90,
+            13: 90,
+            12: 90,
+            11: 90,
+            10: 80,
+            9: 80,
+            8: 80,
+            7: 80,
+            6: 70,
+            5: 40,
+            4: 10,
+            3: 0,
+            2: 0
+        }
+        return score_map.get(level)
 
     def score_of_direction(self):
         if self.direction == '东':
-            return 80
-        elif self.direction == '南':
-            return 100
-        elif self.direction == '西':
             return 60
+        elif self.direction == '南':
+            return 80
+        elif self.direction == '西':
+            return 40
         elif self.direction == '北':
-            return 20
+            return 10
         else:
             raise RuntimeError
 
     def score_of_area(self):
         area = round(float(self.area))
         if area == 108:
-            return 100
-        elif area == 107:
-            return 100
-        elif area == 115:
             return 90
-        elif area == 130:
-            return 80
+        elif area == 115:
+            return 100
         elif area == 131:
-            return 80
+            return 60
         elif area == 132:
-            return 80
+            return 60
         elif area == 138:
-            return 70
+            return 80
         elif area == 137:
-            return 70
+            return 80
         elif area == 139:
-            return 70
+            return 80
         elif area == 140:
             return 70
         else:
@@ -143,33 +152,35 @@ def generate_html(data):
 
 def compute_color(data):
     size = 0
-    score_set = set()
+
+    score_list = []
     for building in data.values():
         for level in building:
             for house in level.values():
                 size += 1
-                score_set.add(house.score)
-    sorted_score = list(score_set)
-    sorted_score.sort(reverse=True)
+                score_list.append(house.score)
+    score_set = list(set(score_list))
+    score_set.sort(reverse=True)
+    score_list.sort(reverse=True)
 
-    first_index = int(ceil(len(sorted_score) * 0.3))
-    second_index = int(ceil(len(sorted_score) * 0.6))
+    first_index = int(ceil(len(score_list) * 0.3))
+    second_index = int(ceil(len(score_list) * 0.6))
 
     for building in data.values():
         for level in building:
             for house in level.values():
-                current_index = sorted_score.index(house.score)
-                house.sort = current_index + 1
-                if house.score >= sorted_score[first_index]:
+                current_index = score_list.index(house.score)
+                house.sort = score_set.index(house.score) + 1
+                if house.score >= score_list[first_index]:
                     house.alpha = (first_index - current_index + 1) / float(first_index + 1)
                     house.green = 255
                     house.red = 50
-                elif house.score >= sorted_score[second_index]:
+                elif house.score >= score_list[second_index]:
                     house.alpha = (second_index - current_index + 1) / float(second_index - first_index + 1)
                     house.blue = 255
                     house.green = 50
                 else:
-                    house.alpha = 1 - (len(sorted_score) - current_index) / float(len(sorted_score) - second_index)
+                    house.alpha = 1 - (len(score_list) - current_index) / float(len(score_list) - second_index + 4)
                     house.red = 255
     return data
 
