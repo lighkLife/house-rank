@@ -1,32 +1,130 @@
-01, 33, 北, 107.92,false, false, 143 || 02, 33, 东, 138.77, false, false, 183 || 03, 33,南, 131.5, false, true, 184 || 04, 33, 西, 138.77, false, false, 183
-01, 32, 北, 107.92, true, false, 145 || 02, 32, 东, 138.77, false, false, 186 || 03, 32,南, 131.5, false, true, 187 || 04, 32, 西, 138.77, false, false, 186
-01, 31, 北, 107.92, true, false, 146 || 02, 31, 东, 138.77, false, false, 187 || 03, 31,南, 131.5, false, true, 188 || 04, 31, 西, 138.77, false, false, 187
-01, 30, 北, 107.92, true, false, 146 || 02, 30, 东, 138.77, false, false, 187 || 03, 30,南, 131.5, false, true, 188 || 04, 30, 西, 138.77, false, false, 187
-01, 29, 北, 107.92, true, false, 146 || 02, 29, 东, 138.77, false, false, 187 || 03, 29,南, 131.5, false, true, 188 || 04, 29, 西, 138.77, false, false, 187
-01, 28, 北, 107.92, true, false, 146 || 02, 28, 东, 138.77, false, false, 187 || 03, 28,南, 131.5, false, true, 188 || 04, 28, 西, 138.77, false, false, 187
-01, 27, 北, 107.92, true, false, 146 || 02, 27, 东, 138.77, false, false, 187 || 03, 27,南, 131.5, false, true, 188 || 04, 27, 西, 138.77, false, false, 187
-01, 26, 北, 107.92, true, false, 146 || 02, 26, 东, 138.77, false, false, 188 || 03, 26,南, 131.5, false, true, 189 || 04, 26, 西, 138.77, false, false, 188
-01, 25, 北, 107.92, true, false, 146 || 02, 25, 东, 138.77, false, false, 188 || 03, 25,南, 131.5, false, true, 189 || 04, 25, 西, 138.77, false, false, 188
-01, 24, 北, 107.92, true, false, 146 || 02, 24, 东, 138.77, false, false, 188 || 03, 24,南, 131.5, false, true, 189 || 04, 24, 西, 138.77, false, false, 188
-01, 23, 北, 107.92, true, false, 147 || 02, 23, 东, 138.77, false, false, 188 || 03, 23,南, 131.5, false, true, 189 || 04, 23, 西, 138.77, false, false, 188
-01, 22, 北, 107.92, true, false, 147 || 02, 22, 东, 138.77, false, false, 188 || 03, 22,南, 131.5, false, true, 189 || 04, 22, 西, 138.77, false, false, 188
-01, 21, 北, 107.92, true, false, 147 || 02, 21, 东, 138.77, false, false, 189 || 03, 21,南, 131.5, false, true, 190 || 04, 21, 西, 138.77, false, false, 189
-01, 20, 北, 107.92, true, false, 147 || 02, 20, 东, 138.77, false, false, 189 || 03, 20,南, 131.5, false, true, 190 || 04, 20, 西, 138.77, false, false, 189
-01, 19, 北, 107.92, true, false, 147 || 02, 19, 东, 138.77, false, false, 189 || 03, 19,南, 131.5, false, true, 190 || 04, 19, 西, 138.77, false, false, 189
-01, 18, 北, 107.92, true, false, 147 || 02, 18, 东, 138.77, false, false, 189 || 03, 18,南, 131.5, false, true, 190 || 04, 18, 西, 138.77, false, false, 189
-01, 17, 北, 107.92, true, false, 147 || 02, 17, 东, 138.77, false, false, 189 || 03, 17,南, 131.5, false, true, 190 || 04, 17, 西, 138.77, false, false, 189
-01, 16, 北, 107.92, true, false, 147 || 02, 16, 东, 138.77, false, false, 189 || 03, 16,南, 131.5, false, true, 190 || 04, 16, 西, 138.77, false, false, 189
-01, 15, 北, 107.92, true, false, 147 || 02, 15, 东, 138.77, false, false, 189 || 03, 15,南, 131.5, false, true, 190 || 04, 15, 西, 138.77, false, false, 189
-01, 14, 北, 107.92, true, false, 147 || 02, 14, 东, 138.77, false, false, 189 || 03, 14,南, 131.5, false, true, 190 || 04, 14, 西, 138.77, false, false, 189
-01, 13, 北, 107.92, true, false, 147 || 02, 13, 东, 138.77, false, false, 189 || 03, 13,南, 131.5, false, true, 190 || 04, 13, 西, 138.77, false, false, 189
-01, 12, 北, 107.92, true, false, 147 || 02, 12, 东, 138.77, false, false, 189 || 03, 12,南, 131.5, false, true, 190 || 04, 12, 西, 138.77, false, false, 189
-01, 11, 北, 107.92, true, false, 147 || 02, 11, 东, 138.77, false, false, 189 || 03, 11,南, 131.5, false, true, 190 || 04, 11, 西, 138.77, false, false, 189
-01, 10, 北, 107.92, true, false, 147 || 02, 10, 东, 138.77, false, false, 189 || 03, 10,南, 131.5, false, true, 190 || 04, 10, 西, 138.77, false, false, 189
-01, 9,  北, 107.92, true, false, 147 || 02, 9,  东, 138.77, false, false, 189 || 03, 9, 南, 131.5, false, true, 190 || 04, 9,  西, 138.77, false, false, 189
-01, 8,  北, 107.92, true, false, 146 || 02, 8,  东, 138.77, false, false, 189 || 03, 8, 南, 131.5, false, true, 190 || 04, 8,  西, 138.77, false, false, 189
-01, 7,  北, 107.92, true, false, 146 || 02, 7,  东, 138.77, false, false, 189 || 03, 7, 南, 131.5, false, true, 190 || 04, 7,  西, 138.77, false, false, 189
-01, 6,  北, 107.92, true, false, 146 || 02, 6,  东, 138.77, false, false, 188 || 03, 6, 南, 131.5, false, true, 189 || 04, 6,  西, 138.77, false, false, 188
-01, 5,  北, 107.92, true, false, 146 || 02, 5,  东, 138.77, true , false, 188 || 03, 5, 南, 131.5, true , true, 189 || 04, 5,  西, 138.77, true,  false, 188
-01, 4,  北, 107.92, true, false, 146 || 02, 4,  东, 138.77, true , false, 188 || 03, 4, 南, 131.5, true , true, 189 || 04, 4,  西, 138.77, true,  false, 188
-01, 3,  北, 107.92, true, false, 142 || 02, 3,  东, 138.77, true , false, 183 || 03, 3, 南, 131.5, true , true, 184 || 04, 3,  西, 138.77, true,  false, 183
-01, 2,  北, 107.92, true, false, 142 || 02, 2,  东, 138.77, true , false, 184 ||                                    || 04, 2,  西, 138.77, true,  false, 184
+01,33,北,107.92,false,false,143
+01,32,北,107.92,true ,false,145
+01,31,北,107.92,true ,false,146
+01,30,北,107.92,true ,false,146
+01,29,北,107.92,true ,false,146
+01,28,北,107.92,true ,false,146
+01,27,北,107.92,true ,false,146
+01,26,北,107.92,true ,false,146
+01,25,北,107.92,true ,false,146
+01,24,北,107.92,true ,false,146
+01,23,北,107.92,true ,false,147
+01,22,北,107.92,true ,false,147
+01,21,北,107.92,true ,false,147
+01,20,北,107.92,true ,false,147
+01,19,北,107.92,true ,false,147
+01,18,北,107.92,true ,false,147
+01,17,北,107.92,true ,false,147
+01,16,北,107.92,true ,false,147
+01,15,北,107.92,true ,false,147
+01,14,北,107.92,true ,false,147
+01,13,北,107.92,true ,false,147
+01,12,北,107.92,true ,false,147
+01,11,北,107.92,true ,false,147
+01,10,北,107.92,true ,false,147
+01,9 ,北,107.92,true ,false,147
+01,8 ,北,107.92,true ,false,146
+01,7 ,北,107.92,true ,false,146
+01,6 ,北,107.92,true ,false,146
+01,5 ,北,107.92,true ,false,146
+01,4 ,北,107.92,true ,false,146
+01,3 ,北,107.92,true ,false,142
+01,2 ,北,107.92,true ,false,142
+
+02,33,东,138.77,false,false,183
+02,32,东,138.77,false,false,186
+02,31,东,138.77,false,false,187
+02,30,东,138.77,false,false,187
+02,29,东,138.77,false,false,187
+02,28,东,138.77,false,false,187
+02,27,东,138.77,false,false,187
+02,26,东,138.77,false,false,188
+02,25,东,138.77,false,false,188
+02,24,东,138.77,false,false,188
+02,23,东,138.77,false,false,188
+02,22,东,138.77,false,false,188
+02,21,东,138.77,false,false,189
+02,20,东,138.77,false,false,189
+02,19,东,138.77,false,false,189
+02,18,东,138.77,false,false,189
+02,17,东,138.77,false,false,189
+02,16,东,138.77,false,false,189
+02,15,东,138.77,false,false,189
+02,14,东,138.77,false,false,189
+02,13,东,138.77,false,false,189
+02,12,东,138.77,false,false,189
+02,11,东,138.77,false,false,189
+02,10,东,138.77,false,false,189
+02,9 ,东,138.77,false,false,189
+02,8 ,东,138.77,false,false,189
+02,7 ,东,138.77,false,false,189
+02,6 ,东,138.77,false,false,188
+02,5 ,东,138.77,true ,false,188
+02,4 ,东,138.77,true ,false,188
+02,3 ,东,138.77,true ,false,183
+02,2 ,东,138.77,true ,false,184
+
+03,33,南,131.5 ,false,true ,184
+03,32,南,131.5 ,false,true ,187
+03,31,南,131.5 ,false,true ,188
+03,30,南,131.5 ,false,true ,188
+03,29,南,131.5 ,false,true ,188
+03,28,南,131.5 ,false,true ,188
+03,27,南,131.5 ,false,true ,188
+03,26,南,131.5 ,false,true ,189
+03,25,南,131.5 ,false,true ,189
+03,24,南,131.5 ,false,true ,189
+03,23,南,131.5 ,false,true ,189
+03,22,南,131.5 ,false,true ,189
+03,21,南,131.5 ,false,true ,190
+03,20,南,131.5 ,false,true ,190
+03,19,南,131.5 ,false,true ,190
+03,18,南,131.5 ,false,true ,190
+03,17,南,131.5 ,false,true ,190
+03,16,南,131.5 ,false,true ,190
+03,15,南,131.5 ,false,true ,190
+03,14,南,131.5 ,false,true ,190
+03,13,南,131.5 ,false,true ,190
+03,12,南,131.5 ,false,true ,190
+03,11,南,131.5 ,false,true ,190
+03,10,南,131.5 ,false,true ,190
+03,9 ,南,131.5 ,false,true ,190
+03,8 ,南,131.5 ,false,true ,190
+03,7 ,南,131.5 ,false,true ,190
+03,6 ,南,131.5 ,false,true ,189
+03,5 ,南,131.5 ,true ,true ,189
+03,4 ,南,131.5 ,true ,true ,189
+03,3 ,南,131.5 ,true ,true ,184
+
+04,33,西,138.77,false,false,183
+04,32,西,138.77,false,false,186
+04,31,西,138.77,false,false,187
+04,30,西,138.77,false,false,187
+04,29,西,138.77,false,false,187
+04,28,西,138.77,false,false,187
+04,27,西,138.77,false,false,187
+04,26,西,138.77,false,false,188
+04,25,西,138.77,false,false,188
+04,24,西,138.77,false,false,188
+04,23,西,138.77,false,false,188
+04,22,西,138.77,false,false,188
+04,21,西,138.77,false,false,189
+04,20,西,138.77,false,false,189
+04,19,西,138.77,false,false,189
+04,18,西,138.77,false,false,189
+04,17,西,138.77,false,false,189
+04,16,西,138.77,false,false,189
+04,15,西,138.77,false,false,189
+04,14,西,138.77,false,false,189
+04,13,西,138.77,false,false,189
+04,12,西,138.77,false,false,189
+04,11,西,138.77,false,false,189
+04,10,西,138.77,false,false,189
+04,9 ,西,138.77,false,false,189
+04,8 ,西,138.77,false,false,189
+04,7 ,西,138.77,false,false,189
+04,6 ,西,138.77,false,false,188
+04,5 ,西,138.77,true ,false,188
+04,4 ,西,138.77,true ,false,188
+04,3 ,西,138.77,true ,false,183
+04,2 ,西,138.77,true ,false,184

@@ -63,7 +63,7 @@
             % for house_map in building:
             <tr>
                 % if house_map.get('北') is not None:
-                <th>${house_map['北'].level}</th>
+                <th>${house_map['北'].floor}</th>
                 % for house in [house_map.get('北'), house_map.get('西'), house_map.get('南'), house_map.get('东')]:
                 % if house is not None:
                 <td width="${house.area + 10}" height="60"

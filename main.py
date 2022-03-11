@@ -1,12 +1,13 @@
+import itertools
 from math import ceil
 
 from mako.template import Template
 
 
 class House:
-    def __init__(self, number, level, direction, area, apartment, courtyard, total):
+    def __init__(self, number, floor, direction, area, apartment, courtyard, total):
         self.number = number
-        self.level = level
+        self.floor = int(floor)
         self.direction = direction
         self.area = round(float(area))
         self.apartment = apartment == "true"
@@ -23,9 +24,10 @@ class House:
         return self.__str__()
 
     def __str__(self):
-        return f"number={self.number}, level={self.level}, direction={self.direction}, area={self.area}, apartment={self.apartment}" \
-               + f"courtyard={self.courtyard}, total={self.total}, score={self.total}, score={self.score}, sort={self.sort}" + \
-               f"red={self.red}, green={self.green}, blue={self.blue}, alpha={self.alpha}"
+        return f"(number={self.number}, floor={self.floor}, direction={self.direction}, area={self.area}," \
+               f" apartment={self.apartment} courtyard={self.courtyard}, total={self.total}, score={self.total}," \
+               f" score={self.score}, sort={self.sort} red={self.red}, green={self.green}, blue={self.blue}," \
+               f" alpha={self.alpha})"
 
     def compute_score(self):
         return self.score_of_level() \
@@ -35,7 +37,7 @@ class House:
                + self.score_of_courtyard()
 
     def score_of_level(self):
-        level = int(self.level)
+        floor = int(self.floor)
         score_map = {
             33: 0,
             32: 0,
@@ -70,7 +72,7 @@ class House:
             3: 0,
             2: 0
         }
-        return score_map.get(level)
+        return score_map.get(floor)
 
     def score_of_direction(self):
         if self.direction == '东':
@@ -122,22 +124,38 @@ class House:
 
 
 def read_file(name):
-    data = []
+    all_house = []
     with open(name, "r", encoding='utf8') as f:
-        for row in range(33):
-            line = f.readline(200)
-            if len(line) <= 0:
+        # for row in range(33):
+        #     line = f.readline(200)
+        #     if len(line) <= 0:
+        #         continue
+        #     level_map = {}
+        #     for item in line.split("||"):
+        #         content = item.replace("\n", "").replace("\r", "").replace(" ", "")
+        #         if len(content) <= 0:
+        #             continue
+        #         it = content.split(",")
+        #         house = House(it[0], it[1], it[2], it[3], it[4], it[5], it[6])
+        #         level_map[house.direction] = house
+        #     data.append(level_map)
+        for line in f.readlines():
+            content = line.replace("\n", "").replace("\r", "").replace(" ", "")
+            if len(content) <= 0:
                 continue
-            level_map = {}
-            for item in line.split("||"):
-                content = item.replace("\n", "").replace("\r", "").replace(" ", "")
-                if len(content) <= 0:
-                    continue
-                it = content.split(",")
-                house = House(it[0], it[1], it[2], it[3], it[4], it[5], it[6])
-                level_map[house.direction] = house
-            data.append(level_map)
-    return data
+            columns = content.split(",")
+            house = House(columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6])
+            all_house.append(house)
+
+    all_house.sort(key=lambda x: x.floor, reverse=True)
+    result = []
+    for _, house_list in itertools.groupby(all_house, lambda x: x.floor):
+        level_map = {}
+        for house in house_list:
+            level_map[house.direction] = house
+        result.append(level_map)
+    # result.sort(key=lambda x: x, reverse=True)
+    return result
 
 
 def write_file(name, html):
